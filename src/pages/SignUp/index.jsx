@@ -1,12 +1,11 @@
-import { FiLock, FiMail } from 'react-icons/fi'
+import { FiArrowLeft, FiLock, FiUser, FiMail } from 'react-icons/fi'
 import { Container, Form, Body } from './style'
 
-import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
+import { Button } from '../../components/Button'
 import { Back } from '../../components/Back'
 
-
-export function SignIn(){
+export function SignUp(){
   return(
     <Body>
     <Container>
@@ -17,7 +16,13 @@ export function SignIn(){
       </div>
 
       <legend>Faça seu login</legend>
-      <Input
+        <Input
+        icon={FiUser} 
+        type="text"
+        placeholder="Nome"
+        />
+
+        <Input
         icon={FiMail} 
         type="email"
         placeholder="E-mail"
@@ -31,7 +36,7 @@ export function SignIn(){
 
         <Button title="Entrar"/>
 
-        <Back title="Criar Conta"/>
+        <Back icon={FiArrowLeft} title="Voltar para o login"/>
       </Form>
 
     </Container>
